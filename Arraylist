@@ -1,0 +1,57 @@
+import java.util.*;
+public class Array {
+
+    public static void main(String[] args) {
+ 
+        List<String> list = new ArrayList<>();
+
+        list.add("A");
+        list.add("B");
+        list.add("A");
+
+        System.out.println(list);
+ 
+        list.add(1, "element");
+        System.out.println(list);
+ 
+        list.set(1, "amrit");
+        System.out.println(list);
+ 
+        System.out.println(list.size());
+ 
+        list.remove("A");
+        System.out.println(list);
+        System.out.println(list.size());
+ 
+        for (String s : list) {
+            
+            System.out.println(s);
+        }
+
+        Iterator<String> it = list.iterator();
+
+        while(it.hasNext()) {
+
+            System.out.println(it.next());
+        }
+
+        ListIterator<String> lt = list.listIterator();
+
+        while(lt.hasNext()) {
+
+            lt.next();
+        }
+        while(lt.hasPrevious()) {
+
+            System.out.print(lt.previous());
+        }
+
+        ArrayList<String> l = new ArrayList<>();
+
+        l.addAll(list);
+
+        list.clear();
+
+
+    }
+}
